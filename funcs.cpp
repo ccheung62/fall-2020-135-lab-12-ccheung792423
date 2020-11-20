@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <iomanip>
+#include <string>
 
 #include "funcs.h"
 
@@ -17,7 +17,7 @@ std::vector<int> makeVector(int n){
 std::vector<int> goodVibes(const std::vector<int> &v){
   std::vector<int> pos;
   for(int i=0; i<v.size(); i++){
-    if (v[i] >= 0){
+    if (v[i] > 0){
       pos.push_back(v[i]);
     }
   }
@@ -61,11 +61,13 @@ std::vector<int> sumPairWise(const std::vector<int> &v1, const std::vector<int> 
   return result;
 }
 
-void printvector (std::vector<int> v){
+std::string printvector (std::vector<int> v){
+  std::string result = "";
   for (int i=0; i<v.size(); i++){
-    std::cout << v[i] << std::setw(4);
+    result += std::to_string(v[i]) + "   ";
   }
-  std::cout << std::endl;
+  result += "\n";
+  return result;
 }
 
 std::vector<int> randomvector(std::vector<int> &v, int len){
