@@ -37,9 +37,9 @@ int main (){
 
   //Task D
   std::cout << "Task D" << std::endl;
-  randomvector(v,3);
+  randomvector(v,rand()%5);
   std::cout << "The first vector contains:  " << printvector(v);
-  randomvector(v2,5);
+  randomvector(v2,rand()%5);
   std::cout << "The second vector contains: " << printvector(v2);
   std::cout << std::endl;
   std::cout << "After adding the two vectors pair wise:" << std::endl << printvector(sumPairWise(v,v2));
